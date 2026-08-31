@@ -271,7 +271,7 @@
 
 	<nav class="stack" style="--stack-gap: 0.25rem" aria-label="Charts">
 		<p class="docs-nav-label">Charts</p>
-		<a href="/components/chart" aria-current={current('/components/chart')}>Chart</a>
-		<a href="/blocks/charts" aria-current={current('/blocks/charts')}>Charts</a>
+		<a href="/components/chart" aria-current={current('/components/chart')}>Chart Components</a>
+		<a href="/blocks/charts" aria-current={current('/blocks/charts')}>Chart Blocks</a>
 	</nav>
 </div>

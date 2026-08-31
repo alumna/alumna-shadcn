@@ -225,8 +225,8 @@
 	];
 
 	const charts = [
-		{ href: '/components/chart', label: 'Charts' },
-		{ href: '/blocks/charts', label: 'Charts Blocks' }
+		{ href: '/components/chart', label: 'Chart Components' },
+		{ href: '/blocks/charts', label: 'Chart Blocks' }
 	];
 
 	function hide_on_link(event) {

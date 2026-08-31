@@ -257,9 +257,14 @@ html.dark .docs-toggle:hover {
 	scroll-margin-block-start: 0.75rem;
 }
 
+.docs-main p {
+    line-height: 1.625rem;
+    font-weight: 450;
+}
+
 .docs-main p,
 .docs-main li {
-	color: var(--muted-foreground);
+	color: var(--foreground);
 }
 
 .docs-toc {
@@ -283,6 +288,7 @@ html.dark .docs-toggle:hover {
 
 .docs-main a:not(.button) {
 	color: var(--foreground);
+	font-weight: 700;
 }
 
 .docs-toc a,

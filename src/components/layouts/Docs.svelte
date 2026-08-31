@@ -235,9 +235,25 @@
 	}
 </script>
 
+<style>
+    .logo {
+        margin: 0 1.25rem;
+    }
+
+    .logo svg {
+        width: 1.5rem;
+    }
+</style>
+
 <div class="docs-shell">
 	<header class="docs-top">
 		<nav class="nav-menu" aria-label="Site">
+			<div class="logo">
+			    <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round">
+					<path d="M7 4v7M12 4v16M17 4v7"/>
+    			</svg>
+			</div>
+
 			<a class="nav-menu-link" href="/">Introduction</a>
 			<a class="nav-menu-link" href="/install">Install</a>
 			<a class="nav-menu-link" href="/theming">Theming</a>

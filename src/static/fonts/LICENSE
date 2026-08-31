@@ -1,0 +1,11 @@
+Ubuntu Sans (variable)
+
+File: ubuntu-vf.woff2
+
+This font is licensed under the Ubuntu Font Licence, version 1.0.
+
+Licence text:
+https://ubuntu.com/legal/font-licence
+
+This file is used only by the alumna-shadcn docs site (src/static/css/site.css).
+The published library CSS (alumna-shadcn.css) does not reference it.

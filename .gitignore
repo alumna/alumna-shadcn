@@ -1,0 +1,6 @@
+# Alumna production output. CI builds this and uploads it; do not commit it.
+/build/
+
+# Logs / OS
+*.log
+.DS_Store

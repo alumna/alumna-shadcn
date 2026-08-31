@@ -1,0 +1,59 @@
+# Build the Alumna SSG into build/ and publish it to GitHub Pages.
+# Public site: https://shadcn.alumna.dev (custom domain on this repo).
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Alumna
+        run: |
+          curl -fsSL https://alumna.dev/install | bash
+          echo "$HOME/.alumna/bin" >> "$GITHUB_PATH"
+
+      - name: Build SSG
+        run: |
+          alumna --version
+          alumna build --ssg
+
+      - name: GitHub Pages 404 fallback
+        run: cp build/_alumna/spa.html build/404.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

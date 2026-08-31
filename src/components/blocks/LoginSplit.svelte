@@ -4,6 +4,12 @@
 	}
 </script>
 
+<style>
+    :global(.docs-main > .box):has(.login-split) {
+        max-width: 90rem;
+    }
+</style>
+
 <div class="login-split">
 	<div class="login-split-main">
 		<a class="login-brand" href="/">

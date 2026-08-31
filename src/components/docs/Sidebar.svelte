@@ -338,6 +338,12 @@
 	</div>
 {/snippet}
 
+<style>
+    .box {
+        max-width: 90rem;
+    }
+</style>
+
 <div class="box">
 	<div class="stack" style="--stack-gap: 1.5rem">
 		<div class="stack" style="--stack-gap: 0.5rem">

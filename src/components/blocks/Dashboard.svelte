@@ -92,6 +92,12 @@
 	</svg>
 {/snippet}
 
+<style>
+    :global(.docs-main > .box):has(.shell) {
+        max-width: 90rem;
+    }
+</style>
+
 <div class="shell" data-open={open ? 'true' : undefined} data-collapsed={collapsed ? 'true' : undefined}>
 	<button class="shell-backdrop" type="button" tabindex="-1" onclick={close} aria-label="Close menu"></button>
 

@@ -4,8 +4,8 @@
 :root {
     color-scheme: light;
 
-    --sidebar: oklch(1 0 0);
-    --sidebar-border: oklch(1 0 0);
+    /*--sidebar: oklch(1 0 0);*/
+    /*--sidebar-border: oklch(1 0 0);*/
     --text-xs: 0.8rem;
     --text-sm: 0.9375rem;
     --text-base: 1.1rem;
@@ -17,8 +17,8 @@
 html.dark {
 	color-scheme: dark;
 
-	--sidebar: oklch(0.145 0 0);
-	--sidebar-border: oklch(0.145 0 0);
+	/*--sidebar: oklch(0.145 0 0);*/
+	/*--sidebar-border: oklch(0.145 0 0);*/
 }
 
 @font-face {
@@ -45,8 +45,8 @@ html,
 	flex-shrink: 0;
 	display: flex;
 	align-items: center;
-	padding: 1rem 1rem 2rem 1rem;
-	border-bottom: none;
+	padding: 1.5rem 1rem;
+	border-bottom: solid 1px var(--sidebar-border);
 	background: var(--background);
 }
 
@@ -264,7 +264,7 @@ html.dark .docs-toggle:hover {
 
 .docs-main p,
 .docs-main li {
-	color: var(--foreground);
+	color: var(--muted-foreground);
 }
 
 .docs-toc {
@@ -288,7 +288,7 @@ html.dark .docs-toggle:hover {
 
 .docs-main a:not(.button) {
 	color: var(--foreground);
-	font-weight: 700;
+	font-weight: 400;
 }
 
 .docs-toc a,
